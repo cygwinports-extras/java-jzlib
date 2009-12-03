@@ -1,0 +1,28 @@
+inherit java
+
+DESCRIPTION="Java zlib implementation"
+HOMEPAGE="http://www.jcraft.com/jzlib/"
+SRC_URI="http://www.jcraft.com/jzlib/${ORIG_PN}-${PV}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygjavac -d build/classes com
+	cygjar -C build/classes -cf build/jzlib-${PV}.jar com
+	cygjavadoc -d build/javadoc $(find com -name '*.java')
+}
+
+src_test() {
+	cd ${B}/example
+	cygjavac -classpath ${B}/build/jzlib-${PV}.jar *.java
+	for t in *.java
+	do
+		cygjava -classpath ${B}/build/jzlib-${PV}.jar:. ${t%.java}
+	done
+}
+
+src_install() {
+	cd ${B}
+	dojar build/*.jar
+	dojavadoc build/javadoc/
+}

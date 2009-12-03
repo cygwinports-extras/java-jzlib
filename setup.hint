@@ -1,0 +1,5 @@
+category: Java
+sdesc: "Java Zlib implementation"
+ldesc: "JZlib is a re-implementation of zlib in pure Java. The first and 
+final aim for hacking this stuff is to add the packet compression 
+support to pure Java SSH systems."

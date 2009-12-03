@@ -1,0 +1,42 @@
+java-jzlib
+------------------------------------------
+JZlib is a re-implementation of zlib in pure Java. The first and final 
+aim for hacking this stuff is to add the packet compression support to 
+pure Java SSH systems.
+
+Build requirements:
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  ecj-3.3.2-1
+  jamvm-1.5.3-1
+  jdk6-langtools-1.6.0_17-1
+
+Canonical website:
+  http://www.jcraft.com/jzlib/
+
+Canonical download:
+  http://www.jcraft.com/jzlib/
+
+-------------------------------------------
+
+Build instructions:
+  unpack java-jzlib-1.0.7-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./java-jzlib-1.0.7-X.cygport all
+
+This will create:
+  /usr/src/java-jzlib-1.0.7-X-src.tar.bz2
+  /usr/src/java-jzlib-1.0.7-X.tar.bz2
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 1.0.7-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
