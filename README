@@ -5,11 +5,10 @@ aim for hacking this stuff is to add the packet compression support to
 pure Java SSH systems.
 
 Build requirements:
-  binutils-2.19.51-1
-  cygport-0.9.10-1
-  ecj-3.3.2-1
+  ant-1.8.1-1
+  cygport-0.9.84-1
   jamvm-1.5.3-1
-  jdk6-langtools-1.6.0_17-1
+  jdk6-langtools-1.6.0_19-1
 
 Canonical website:
   http://www.jcraft.com/jzlib/
@@ -33,6 +32,9 @@ This will create:
 -------------------------------------------
 
 Port Notes:
+
+----- version 1.0.7-2 -----
+Rebuilt with ant.
 
 ----- version 1.0.7-1 -----
 Initial release for Cygwin 1.7.
