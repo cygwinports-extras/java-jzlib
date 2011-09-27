@@ -6,17 +6,10 @@ SRC_URI="http://www.jcraft.com/jzlib/${ORIG_PN}-${PV}.tar.gz
          mirror://portage/dev-java/${ORIG_PN}/files/jzlib_build.xml"
 
 ANT_BUILD_XML="jzlib_build.xml"
-ANT_BUILD_ARGS="-Dversion=${PV}"
+ANT_BUILD_ARGS="-Dsrc=src/main/java -Dversion=${PV}"
 ANT_BUILD_TARGETS="dist javadoc"
 ANT_INSTALL_JARS="dist/lib/jzlib-${PV}.jar"
 ANT_INSTALL_JAVADOC="javadoc"
-
-CYGPORT_USE_UNSTABLE_API=1
-src_unpack_hook() {
-	rm -fr src/
-	mkdir -p src
-	mv -f com src/
-}
 
 src_test() {
 	cd ${B}/example
